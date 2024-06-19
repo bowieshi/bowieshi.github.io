@@ -1,9 +1,3 @@
----
-title: 'Creating a Comfortable Environment for Alchemy'
-date: 2023-07-05 14:30:36
-tags:
----
-
 ## How to check GPU occupancy
 
 ```shell
