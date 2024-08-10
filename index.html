@@ -12,22 +12,27 @@
     </head>
   
     <body>
-        <nav role="navigation">
-            <div id="nav-container">
+        <div id="head-bar">
+            <div id="head-bar-container">
                 <div id="title">
                     Shi Boao Bowie
                 </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Vita</li>
-                    <li>Projects</li>
-                    <li><a href="pages/courses.html">Courses</a></li>
-                </ul>
+                <nav role="navigation" id="menu-bar">
+                    <ul id="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Vita</li>
+                        <li>Projects</li>
+                        <li><a href="pages/courses.html">Courses</a></li>
+                    </ul>
+                </nav>
+
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" id="menu-icon" tabindex="1"></label>
             </div>
-        </nav>
+        </div>
 
         <div id="container">
-            <aside id="side-bar">
+            <div id="side-bar">
                 <div id="selfie">
                     <img src="./images/selfie_resized.png" alt="selfie" title="bowie" width="240px" height="290px">
                 </div>
@@ -54,7 +59,7 @@
                         <!-- <li>...</li> -->
                     </ul>
                 </div>
-            </aside>
+            </div>
             <div id="content">
                 <div id="Bio">
                     <h1>Biography</h1>
