@@ -54,13 +54,22 @@ nav li {
 h1 {
     padding: 0rem;
     margin: 10px;
-    
 }
 
 h2 {
     padding: 0rem;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+h3 {
+    padding: 0rem;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+small {
+    font-size: 0.8rem;
 }
 
 #content {
