@@ -1,135 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Shi Boao's Homepage</title>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="./js/script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <meta
+            name="description"
+            content="Shi Boao (Bowie) is a computer science researcher focused on vision understanding, embodied intelligence, and LLM agents."
+        >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="./js/script.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
-  
+
     <body>
-        <div id="head-bar">
+        <header id="head-bar">
             <div id="head-bar-container">
-                <div id="title">
-                    Shi Boao Bowie
-                </div>
-                <nav role="navigation" id="menu-bar">
+                <a id="title" href="index.html">Shi Boao Bowie</a>
+
+                <input type="checkbox" id="menuToggle" aria-label="Open navigation menu">
+                <label for="menuToggle" id="menu-icon" tabindex="0" aria-hidden="true"></label>
+
+                <nav role="navigation" id="menu-bar" aria-label="Main navigation">
                     <ul id="nav-list">
                         <li><a href="index.html">Home</a></li>
-                        <li>Vita</li>
-                        <!-- <li><a href="files/Shi_Boao_CV.pdf">Vita</a></li> -->
-                        <li>Projects</li>
+                        <li><a href="./files/Shi_Boao_CV.pdf">Vita</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="pages/courses.html">Courses</a></li>
                     </ul>
                 </nav>
-
-                <input type="checkbox" id="menuToggle">
-                <label for="menuToggle" id="menu-icon" tabindex="1"></label>
             </div>
-        </div>
+        </header>
 
-        <div id="container">
-            <div id="side-bar">
-                <div id="selfie">
-                    <img src="./images/selfie_us.JPG" alt="selfie" title="bowie" width="240px" height="280px">
-                </div>
-                <div id="contact">
+        <main id="container">
+            <aside id="side-bar">
+                <section class="profile-card">
+                    <div id="selfie">
+                        <img src="./images/selfie_us.JPG" alt="Portrait of Shi Boao" title="Bowie">
+                    </div>
+                    <div class="profile-copy">
+                        <p class="eyebrow">Researcher • Engineer • Student</p>
+                        <h1>Shi Boao</h1>
+                        <p>
+                            Computer Science undergraduate and research assistant working on computer vision and computer graphics.
+                        </p>
+                    </div>
+                    <div class="profile-badges">
+                        <!-- <span>UPenn GRASP Lab</span> -->
+                        <span>The University of Hong Kong</span>
+                    </div>
+                </section>
+
+                <section class="side-section" id="contact">
                     <h2>Contact</h2>
                     <ul>
-                        <li>Email: <a href="mailto:aoibosh@connect.hku.hk">aoibosh@connect.hku.hk</a></li>
-                        <!-- <li>Phone: <a href="tel:+8619817718985">19817718985</a></li> -->
+                        <li>
+                            <span>Email</span>
+                            <a href="mailto:aoibosh@connect.hku.hk">aoibosh@connect.hku.hk</a>
+                            <a href="mailto:boaoshi@seas.upenn.edu">boaoshi@seas.upenn.edu</a>
+                        </li>
                     </ul>
-                </div>
-                <div id="links">
+                </section>
+
+                <section class="side-section" id="links">
                     <h2>Links</h2>
                     <ul>
-                        <li><a href="https://github.com/bowieshi"><i class="fab fa-github" id="github"></i></a></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><a href="weixin://contacts/profile/aoibosh"><i class="fab fa-weixin"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/boao-shi/"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/bowieshi" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/boao-shi/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="weixin://contacts/profile/aoibosh" aria-label="WeChat"><i class="fab fa-weixin"></i></a></li>
+                        <li><a href="https://x.com/" aria-label="X"><i class="fab fa-twitter"></i></a></li>
                     </ul>
-                </div>
-                <div id="news">
+                </section>
+
+                <section class="side-section" id="news">
                     <h2>News</h2>
                     <ul>
-                        <li>Homepage was born in 9/5/2024</li>
-                        <!-- <li>...</li> -->
+                        <li>Homepage launched on September 5, 2024.</li>
+                        <li>Currently working on human-scene reconstruction and embodied AI systems.</li>
                     </ul>
-                </div>
-            </div>
-            <div id="content">
-                <div id="Bio">
-                    <h1>Biography</h1>
-                    <p>
-                        Welcome to my homepage!
-                    </p>
-                    <p>
-                        My name is Shi Boao (in Chinese, 施博骜). My English name is Bowie. 
-                        I am a Junior undergraduate from <a href="https://www.hku.hk">The University of Hong Kong</a>, majoring in Computer Science. 
-                        I am Currently a research assistant in <a href="https://yanchaoyang.github.io">InfoBodied Lab</a> supervised by Prof. <a href="https://yanchaoyang.github.io">Yang Yanchao</a>. 
-                        My research interest lies in 3D vision, computer graphics and generative model. I am currently exploring human scene/object interaction capture and generation. 
-                        
-                    </p>
-                </div>
-                <div id="Pub">
-                    <h3>Publication</h3>
-                    <ul>
-                        <li>
-                            <div><b>Coming soon!</b></div>
-                            <div>about human motion generation and object interaction under various real scene</div>
-                            <img src="images/gif3.gif" alt="Description of the GIF" style="height: 120px; width: auto;">
-                            <img src="images/gif1.gif" alt="Description of the GIF" style="height: 120px; width: auto;">
-                            <img src="images/gif2.gif" alt="Description of the GIF" style="height: 120px; width: auto;">
-                            <img src="images/gif7.gif" alt="Description of the GIF" style="height: 200px; width: auto;">
-                            <img src="images/gif6.gif" alt="Description of the GIF" style="height: 200px; width: auto;">
+                </section>
+            </aside>
 
-                        </li>
-                        <li>
-                            <div><b>[EMNLP 2024] ARKS: Active Retrieval in Knowledge Soup for Code Generation</b></div>
-                            <div>Hongjin Su, Shuyang Jiang, Yuhang Lai, Haoyuan Wu, <b>Boao Shi</b>, Che Liu, Qian Liu, Tao Yu</div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div id="Award">
-                    <h3>Award</h3>
-                    <ul>
-                        <li>
-                            <div>Hong Kong University Alumni Prize, Oct. 2024</div>
-                            <div style="font-size: smaller;">The University of Hong Kong</div>
-                        </li>
-                        <li>
-                            <div>Talent Development Scholarship, June. 2024</div>
-                            <div style="font-size: smaller;">The Hong Kong Government</div>
-                        </li>
-                        <li>
-                            <div>Dean’s Honours List, March 2024</div>
-                            <div style="font-size: smaller;">The University of Hong Kong</div>
-                        </li>
-                        <li>
-                            <div>Young Tsun Dart Scholarship, Nov. 2023</div>
-                            <div style="font-size: smaller;">The University of Hong Kong</div>
-                        </li>
-                        <li>
-                            <div>China Soong Ching-ling Foundation Zhiyuan Scholarship, Oct. 2022</div>
-                            <div style="font-size: smaller;">China Soong Ching-ling Foundation</div>
-                        </li>
-                    </ul>
-                </div> -->
+            <div id="content">
+                <section class="hero">
+                    <div class="hero-copy">
+                        <!-- <p class="eyebrow">Vision Understanding • 4D Reconstruction • LLM Agents</p> -->
+                        <!-- <h2>Welcome to My Homepage</h2> -->
+                        <p class="hero-text">
+                            Welcome to my homepage. I am currently a research assistant at UPenn GRASP Lab and an undergraduate majoring in Computer Science at <a href="https://www.hku.hk">The University of Hong Kong</a>.
+                        </p>
+                        <p class="hero-text">
+                            Previously, I worked with <a href="https://yanchaoyang.github.io">InfoBodied Lab</a>, supervised by Prof. <a href="https://yanchaoyang.github.io">Yang Yanchao</a>, and with <a href="https://taoyds.github.io/">Tao Yu</a> at XLang Lab.
+                        </p>
+                        <!-- <div class="hero-actions">
+                            <a class="button primary" href="./files/Shi_Boao_CV.pdf">View Vita</a>
+                            <a class="button secondary" href="#publications">Selected Work</a>
+                        </div> -->
+                    </div>
+                    <!-- <div class="hero-highlights">
+                        <div class="highlight-card">
+                            <span class="highlight-label">Focus</span>
+                            <strong>Vision understanding and LLM agents</strong>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-label">Current Lab</span>
+                            <strong>GRASP Lab, University of Pennsylvania</strong>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-label">Background</span>
+                            <strong>Research in robotics, code generation, and embodied systems</strong>
+                        </div>
+                    </div> -->
+                </section>
+
+                <section class="content-section" id="publications">
+                    <div class="section-heading">
+                        <p class="eyebrow">Research</p>
+                        <h3>Publications</h3>
+                    </div>
+
+                    <div class="card-list">
+                        <article class="info-card publication-card">
+                            <p class="card-tag">SIGGRAPH Asia 2026 under submission</p>
+                            <h4>Promptable Visual Geometry Transformers for 4D Metric Human-Scene Reconstruction</h4>
+                            <p><strong>Boao Shi</strong>, Qiao Feng, Yiming Huang, Lingjie Liu</p>
+                            <div class="media-strip">
+                                <img src="images/hmr2.gif" alt="Biped robot preview 1">
+                                <img src="images/hmr1.gif" alt="Biped robot preview 1">
+                                <img src="images/hmr4.gif" alt="Biped robot preview 1">
+                                <img src="images/hmr3.gif" alt="Biped robot preview 1">
+                                <img src="images/hmr5.gif" alt="Biped robot preview 1">
+                            </div>
+                        </article>
+                        <article class="info-card publication-card">
+                            <p class="card-tag">EMNLP 2024</p>
+                            <h4>ARKS: Active Retrieval in Knowledge Soup for Code Generation</h4>
+                            <p>Hongjin Su, Shuyang Jiang, Yuhang Lai, <strong>Boao Shi</strong>, Haoyuan Wu, Che Liu, Qian Liu, Tao Yu</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="content-section" id="projects">
+                    <div class="section-heading">
+                        <p class="eyebrow">Projects</p>
+                        <h3>Projects</h3>
+                    </div>
+
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <div class="project-copy">
+                                <p class="card-tag">Robotics</p>
+                                <h4>Biped</h4>
+                                <p>
+                                    A self balanced biped robot operating under real time system with lidar and camera, 
+                                </p>
+                            </div>
+                            <div class="media-strip">
+                                <img src="images/biped.gif" alt="Biped robot preview 1">
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-copy">
+                                <p class="card-tag">Motion Capture</p>
+                                <h4>Large-scale Indoor Scene Human Interaction Mocap Data Collector</h4>
+                                <p>
+                                    A system for collecting human motion and object interaction data in diverse
+                                    real-world indoor scenes. We use real-sense and orbbec camera to scan and reconstruct scenes and record human interacting video. 
+                                    Using ROSEFusion to reconstruct scene, Fusion 4D to reconstruct human motion, and scene reconstruction
+                                    Using foundation model to detect and segment human and objects, VLM-based automatic annotation to generate interaction labels.
+                                    Train diffusion-based model to denoise and complete human motion and interaction data.
+                                    Using physical simulation to enhance the physical plausibility of the captured human motion and interaction data.
+                                </p>
+                            </div>
+                            <div class="media-strip">
+                                <img src="images/gif3.gif" alt="Human-scene interaction capture preview 1">
+                                <img src="images/gif1.gif" alt="Human-scene interaction capture preview 2">
+                                <img src="images/gif7.gif" alt="Human-scene interaction capture preview 4">
+                                <img src="images/gif6.gif" alt="Human-scene interaction capture preview 5">
+                                <img src="images/gif2.gif" alt="Human-scene interaction capture preview 3">
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-copy">
+                                <p class="card-tag">Robotics</p>
+                                <h4>Robotics Auto-Aiming System</h4>
+                                <p>
+                                    A real-time robotic targeting system built with online tracking and Kalman-filter-based
+                                    state estimation.
+                                </p>
+                            </div>
+                            <div class="media-strip">
+                                <img src="images/video_0.gif" alt="Auto-aiming system preview 1">
+                                <img src="images/video_1.gif" alt="Auto-aiming system preview 2">
+                                <img src="images/video_2.gif" alt="Auto-aiming system preview 3">
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
 
         <footer>
             <div id="footer">
-                <p>&copy 2024 Shi Boao Bowie.</p>
-                <p>Last modify - 2025 Jan.</p>
+                <p>&copy; 2024 Shi Boao Bowie.</p>
+                <p>Last updated in January 2025.</p>
             </div>
             <div id="visitors">
-                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=dycxnUYjp3j6WoUOjLMzAreHOqAiE2LHgFegQDKAsus&co=95a7b8&cmo=b1bf8a&cmn=8b9c7a&ct=ffffff'></script>
-                <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=dycxnUYjp3j6WoUOjLMzAreHOqAiE2LHgFegQDKAsus&cl=ffffff&w=a"></script> -->
+                <script
+                    type="text/javascript"
+                    id="clustrmaps"
+                    src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=n&amp;d=dycxnUYjp3j6WoUOjLMzAreHOqAiE2LHgFegQDKAsus&amp;co=95a7b8&amp;cmo=b1bf8a&amp;cmn=8b9c7a&amp;ct=ffffff"
+                ></script>
             </div>
         </footer>
     </body>
